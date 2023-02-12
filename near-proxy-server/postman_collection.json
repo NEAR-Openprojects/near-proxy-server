@@ -1,0 +1,209 @@
+{
+	"info": {
+		"name": "NEAR Proxy Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetKeyPair",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/near/get-ed25519pair",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"near",
+						"get-ed25519pair"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Login Url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account_id\": \"{{account_id}}\",\r\n    \"public_key\": \"{{public_key}}\",\r\n    \"contract_id\": \"guest-book.testnet\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/near/get-login-url",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"near",
+						"get-login-url"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SigningWallet Url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account_id\": \"{{account_id}}\",\r\n    \"private_key\": \"{{private_key}}\",\r\n    \"contract_id\": \"guest-book.testnet\",\r\n    \"method_name\": \"getMessages\",\r\n    \"args\": {}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/near/get-transaction-signing-url",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"near",
+						"get-transaction-signing-url"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SigningWallet QR-Code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account_id\": \"{{account_id}}\",\r\n    \"private_key\": \"{{private_key}}\",\r\n    \"contract_id\": \"guest-book.testnet\",\r\n    \"method_name\": \"getMessages\",\r\n    \"args\": {}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/near/get-transaction-signing-qrcode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"near",
+						"get-transaction-signing-qrcode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeFunction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account_id\": \"{{account_id}}\",\r\n    \"private_key\": \"{{private_key}}\",\r\n    \"contract_id\": \"guest-book.testnet\",\r\n    \"method_name\": \"getMessages\",\r\n    \"args\": \"{}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/near/call-change-function",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"near",
+						"call-change-function"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViewFunction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contract_id\": \"guest-book.testnet\",\r\n    \"method_name\": \"getMessages\",\r\n    \"args\": \"{}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/near/call-view-function",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"near",
+						"call-view-function"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckAllowanceAndValidity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account_id\": \"{{account_id}}\",\r\n    \"publickey\": \"{{public_key}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/near/get-key-allowance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"near",
+						"get-key-allowance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
